@@ -18,7 +18,7 @@ import org.w3c.dom.Text;
 
 public class Page2Activity extends BaseActivity {
 
-    private TextView tv_bobby = null;
+   // private TextView tv_bobby = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,6 @@ public class Page2Activity extends BaseActivity {
 
         setPage(R.id.page2);
 
-        setClickableTextView(tv_bobby,R.id.tv_p2_bobby,R.raw.b_1_3_4);
+        setClickableTextView(R.id.tv_p2_bobby,R.raw.b_1_3_4);
     }
 }

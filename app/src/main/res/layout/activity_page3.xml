@@ -1,19 +1,198 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.yiz.anyonecan.Page3Activity"
-    android:background="@drawable/page3"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/page3"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page3"
+    tools:context="com.example.yiz.anyonecan.Page3Activity">
 
-    <TextView
-        android:id="@+id/tv_p3_children"
-        android:clickable="true"
-        android:background="@null"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="800dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        />
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.80" >
+
+                            <TextView
+                                android:id="@+id/tv_p3_children_left"
+                                android:layout_width="match_parent"
+                                android:layout_height="800dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerInParent="true"
+                                android:background="@null"
+                                android:clickable="true" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.12">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.1" />
+
+                                <RelativeLayout
+                                    android:id="@+id/prevBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.25" />
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.65" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.08" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.80" >
+
+                            <TextView
+                            android:id="@+id/tv_p3_children_right"
+                            android:clickable="true"
+                            android:background="@null"
+                            android:layout_width="match_parent"
+                            android:layout_height="800dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            />
+
+                            </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.12">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.65" />
+
+                                <RelativeLayout
+                                    android:id="@+id/nextBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.25" />
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.1" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.08" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_p3_children"-->
+    <!--android:clickable="true"-->
+    <!--android:background="@null"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="800dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--/>-->
 
 </RelativeLayout>

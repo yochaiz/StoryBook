@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 public class Page4Activity extends BaseActivity {
 
-    private TextView tv_bobby = null;
-    private TextView tv_child = null;
+    // private TextView tv_bobby = null;
+    // private TextView tv_child = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class Page4Activity extends BaseActivity {
 
         setPage(R.id.page4);
 
-        setClickableTextView(tv_bobby, R.id.tv_p4_bobby, R.raw.b_1_3_6);
-        setClickableTextView(tv_child, R.id.tv_p4_child, R.raw.b_1_3_7);
+        setClickableTextView(R.id.tv_p4_bobby, R.raw.b_1_3_6);
+        setClickableTextView(R.id.tv_p4_child, R.raw.b_1_3_7);
     }
 }

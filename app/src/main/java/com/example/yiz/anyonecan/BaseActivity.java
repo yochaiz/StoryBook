@@ -53,8 +53,8 @@ public class BaseActivity extends Activity {
         setNavigationButtons();
     }
 
-    protected void setClickableTextView(TextView tv, int tvId, int mediaID) {
-        tv = (TextView) findViewById(tvId);
+    protected void setClickableTextView(int tvId, int mediaID) {
+        TextView tv = (TextView) findViewById(tvId);
         tv.setOnClickListener(new MediaPlayerOnClickListener(mediaID));
         tv.setOnTouchListener(new tvOnTouchListener()); //enables swipe gesture also on TextViews
     }
