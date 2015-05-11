@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LeonidsLib.LeonidsLib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LeonidsLib/LeonidsLib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
