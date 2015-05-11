@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yiz.anyonecan.Page13Activity"
+    android:background="@drawable/page13"
+    android:id="@+id/page13"
+    >
+
+    <TextView
+        android:id="@+id/tv_p13_bobby"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_p13_child"
+        android:layout_width="220dp"
+        android:layout_height="780dp"
+        android:clickable="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="420dp"
+        />
+
+</RelativeLayout>

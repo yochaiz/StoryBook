@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yiz.anyonecan.Page6Activity"
+    android:background="@drawable/page6"
+    android:id="@+id/page6"
+    >
+
+    <TextView
+        android:id="@+id/tv_p6_bobby"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:clickable="true"
+        android:background="@null"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="400dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_p6_child"
+        android:layout_width="500dp"
+        android:layout_height="620dp"
+        android:clickable="true"
+        android:background="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_background"
+    tools:context="com.example.yiz.anyonecan.ListenGameActivity">
+
+    <TextView
+        android:id="@+id/tv_blue_balloon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/seven"
+        android:textSize="120sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="120dp" />
+
+    <TextView
+        android:id="@+id/tv_red_balloon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/seven"
+        android:textSize="120sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@id/tv_blue_balloon"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="120dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_green_balloon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/ten"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@id/tv_red_balloon"
+        android:layout_marginRight="160dp"
+        android:layout_marginTop="180dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_pink_balloon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/seven"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@id/tv_green_balloon"
+        android:layout_marginRight="90dp"
+        android:layout_marginTop="180dp"
+        />
+
+</RelativeLayout>

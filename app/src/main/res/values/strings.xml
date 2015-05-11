@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AnyOneCan</string>
+    <string name="action_settings">Settings</string>
+    <string name="next_page">Next Page</string>
+    <string name="previous_page">Previous Page</string>
+    <string name="refresh">Refresh</string>
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="title_activity_page1">Page 1</string>
+    <string name="title_activity_page2">Page 2</string>
+    <string name="title_activity_page3">Page 3</string>
+    <string name="title_activity_page4">Page 4</string>
+    <string name="title_activity_page5">Page 5</string>
+    <string name="title_activity_page6">Page 6</string>
+    <string name="title_activity_page7">Page 7</string>
+    <string name="title_activity_page8">Page 8</string>
+    <string name="title_activity_page9">Page 9</string>
+    <string name="title_activity_page10">Page 10</string>
+    <string name="title_activity_page11">Page 11</string>
+    <string name="title_activity_page12">Page 12</string>
+    <string name="title_activity_page13">Page 13</string>
+    <string name="title_activity_page14">Page 14</string>
+    <string name="title_activity_listen_game">ListenGameActivity</string>
+
+    <string name="ten">10</string>
+    <string name="seven">7</string>
+    <string name="title_activity_home_screen">HomeScreenActivity</string>
+
+</resources>

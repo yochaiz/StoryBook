@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity"
+    >
+
+    <item
+        android:id="@+id/refresh_page"
+        android:title="@string/refresh"
+        android:icon="@drawable/ic_action_volume_muted"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        />
+
+    <item android:id="@+id/prev_page"
+        android:title="@string/previous_page"
+        android:icon="@android:drawable/ic_media_previous"
+        android:orderInCategory="101"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/next_page"
+        android:title="@string/next_page"
+        android:icon="@android:drawable/ic_media_next"
+        android:orderInCategory="102"
+        app:showAsAction="ifRoom" />
+
+
+
+</menu>
