@@ -22,6 +22,8 @@ public class Page7Activity extends BaseActivity {
 
         setClickableTextView(R.id.tv_p7_bobby_left, R.raw.b_1_3_12);
         setClickableTextView(R.id.tv_p7_bobby_right, R.raw.b_1_3_12);
-        setClickableTextView(R.id.tv_p7_child, R.raw.b_1_3_13);
+        setClickableTextView(R.id.tv_p7_child_right, R.raw.b_1_3_13);
+        setClickableTextView(R.id.tv_p7_child_left_top, R.raw.b_1_3_13);
+        setClickableTextView(R.id.tv_p7_child_left_bottom, R.raw.b_1_3_13);
     }
 }

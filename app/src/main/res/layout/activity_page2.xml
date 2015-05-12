@@ -123,7 +123,7 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.12" >
+                            android:layout_weight="0.12">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -148,22 +148,16 @@
 
                             </LinearLayout>
 
-                            </RelativeLayout>
+                        </RelativeLayout>
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.08" />
 
-
                     </LinearLayout>
 
                 </RelativeLayout>
-
-                <!--<RelativeLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="0dp"-->
-                <!--android:layout_weight="0.06" />-->
 
             </LinearLayout>
 

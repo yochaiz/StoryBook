@@ -35,12 +35,13 @@ public class GlobalState extends Application {
         pages.put(R.id.page11, page);
         page = new Page(Page11Activity.class, Page13Activity.class);
         pages.put(R.id.page12, page);
-        page = new Page(Page12Activity.class, Page14Activity.class);
+        page = new Page(Page12Activity.class
+                , Page14Activity.class);
         pages.put(R.id.page13, page);
-        page = new Page(Page13Activity.class, ListenGameActivity.class);
+        page = new Page(Page13Activity.class, null);
         pages.put(R.id.page14, page);
-        page = new Page(Page14Activity.class, null);
-        pages.put(R.layout.activity_listen_game, page);
+//        page = new Page(Page14Activity.class, null);
+//        pages.put(R.layout.activity_listen_game, page);
     }
 
     public Page getPage(int id) {//returns null if id doesn't exist

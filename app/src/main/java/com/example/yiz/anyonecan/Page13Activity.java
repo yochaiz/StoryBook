@@ -19,7 +19,8 @@ public class Page13Activity extends BaseActivity {
 
         setPage(R.id.page13);
 
-        setClickableTextView(R.id.tv_p13_bobby, R.raw.b_1_3_25);
+        setClickableTextView(R.id.tv_p13_bobby_top, R.raw.b_1_3_25);
+        setClickableTextView(R.id.tv_p13_bobby_bottom, R.raw.b_1_3_25);
         setClickableTextView(R.id.tv_p13_child, R.raw.b_1_3_24);
     }
 }
