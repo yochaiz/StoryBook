@@ -24,5 +24,17 @@
     <string name="ten">10</string>
     <string name="seven">7</string>
     <string name="title_activity_home_screen">HomeScreenActivity</string>
+    <string name="title_activity_song_page1">SongPage1Activity</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="title_activity_jk">jk</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_song_page2">SongPage2Activity</string>
+    <string name="title_activity_song_page3">SongPage3Activity</string>
+    <string name="title_activity_song_page4">SongPage4Activity</string>
+    <string name="title_activity_word_page1">WordPage1Activity</string>
+    <string name="title_activity_word_page2">WordPage2Activity</string>
 
 </resources>

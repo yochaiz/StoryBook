@@ -3,41 +3,28 @@
     android:id="@+id/page5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/page5"
+    android:background="@drawable/storybook_page5"
     tools:context="com.example.yiz.anyonecan.Page5Activity">
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.936">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.2" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.8">
-
-                    <TextView
-                        android:id="@+id/tv_p2_bobby"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@null"
-                        android:clickable="true" />
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -45,176 +32,78 @@
                         android:orientation="vertical">
 
                         <RelativeLayout
+                            android:id="@+id/rl_p8_bobby"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.80">
-
-                            <TextView
-                                android:id="@+id/tv_p5_bobby"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@null"
-                                android:clickable="true" />
-
-                        </RelativeLayout>
+                            android:layout_weight="0.28" />
 
                         <RelativeLayout
+                            android:id="@+id/rl_p8_child"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.12">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal">
-
-                                <RelativeLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.1" />
-
-                                <RelativeLayout
-                                    android:id="@+id/prevBtn"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.25" />
-
-                                <RelativeLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.65" />
-
-                            </LinearLayout>
-
-                        </RelativeLayout>
+                            android:layout_weight="0.26" />
 
                         <RelativeLayout
+                            android:id="@+id/rl_p9_bobby"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.08" />
+                            android:layout_weight="0.26" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_p9_child_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.2" />
+
                     </LinearLayout>
 
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7" />
             </LinearLayout>
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.064">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.2" />
+                    android:id="@+id/rl_p9_child_bottom"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3" />
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.8">
+                    android:id="@+id/prevBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.125" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4" />
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="0.80">
+                <RelativeLayout
+                    android:id="@+id/nextBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.125" />
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical">
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="0.3" />
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="0.7">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:orientation="horizontal">
-
-                                        <RelativeLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="0.3" />
-
-                                        <RelativeLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="0.7">
-
-                                            <TextView
-                                                android:id="@+id/tv_p5_child"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:background="@null"
-                                                android:clickable="true" />
-
-                                        </RelativeLayout>
-
-                                    </LinearLayout>
-
-                                </RelativeLayout>
-
-                            </LinearLayout>
-
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="0.12">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal">
-
-                                <RelativeLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.65" />
-
-                                <RelativeLayout
-                                    android:id="@+id/nextBtn"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.25" />
-
-                                <RelativeLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.1" />
-
-                            </LinearLayout>
-
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="0.08" />
-
-                    </LinearLayout>
-
-                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05" />
 
             </LinearLayout>
 

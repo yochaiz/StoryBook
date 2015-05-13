@@ -19,7 +19,11 @@ public class Page5Activity extends BaseActivity {
 
         setPage(R.id.page5);
 
-        setClickableTextView(R.id.tv_p5_bobby, R.raw.b_1_3_8);
-        setClickableTextView(R.id.tv_p5_child, R.raw.b_1_3_9);
+        setClickableRelativeLayout(R.id.rl_p8_bobby, R.raw.b_1_3_14);
+        setClickableRelativeLayout(R.id.rl_p8_child, R.raw.b_1_3_15);
+
+        setClickableRelativeLayout(R.id.rl_p9_bobby, R.raw.b_1_3_16);
+        setClickableRelativeLayout(R.id.rl_p9_child_top, R.raw.b_1_3_17);
+        setClickableRelativeLayout(R.id.rl_p9_child_bottom, R.raw.b_1_3_17);
     }
 }

@@ -3,7 +3,7 @@
     android:id="@+id/page3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/page3"
+    android:background="@drawable/storybook_page3"
     tools:context="com.example.yiz.anyonecan.Page3Activity">
 
     <LinearLayout
@@ -38,18 +38,11 @@
                         android:orientation="vertical">
 
                         <RelativeLayout
+                            android:id="@+id/rl_p3_children_left"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.80">
-
-                            <TextView
-                                android:id="@+id/tv_p3_children_left"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@null"
-                                android:clickable="true" />
-
-                        </RelativeLayout>
+                            android:layout_weight="0.80"
+                            android:clickable="true" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -119,18 +112,11 @@
                         android:orientation="vertical">
 
                         <RelativeLayout
+                            android:id="@+id/rl_p3_children_right"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.80">
-
-                            <TextView
-                                android:id="@+id/tv_p3_children_right"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@null"
-                                android:clickable="true" />
-
-                        </RelativeLayout>
+                            android:layout_weight="0.80"
+                            android:clickable="true" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -166,7 +152,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.08" />
-
 
                     </LinearLayout>
 

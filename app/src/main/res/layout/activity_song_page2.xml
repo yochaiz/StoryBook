@@ -1,10 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/page7"
+    android:id="@+id/songbook_page2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/storybook_page7"
-    tools:context="com.example.yiz.anyonecan.Page7Activity">
+    android:background="@drawable/songbook_page2"
+    tools:context="com.example.yiz.anyonecan.SongPage2Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,68 +22,15 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
+                    android:id="@+id/rl_song1_full"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.6">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <RelativeLayout
-                            android:id="@+id/rl_p11_bobby"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.3" />
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.25" />
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.25">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical">
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="0.15" />
-
-                                <RelativeLayout
-                                    android:id="@+id/rl_p11_child"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="0.7" />
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="0.15" />
-
-                            </LinearLayout>
-
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.2" />
-                    </LinearLayout>
-
-                </RelativeLayout>
+                    android:layout_weight="0.25" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.4">
+                    android:layout_weight="0.75">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -91,37 +38,47 @@
                         android:orientation="horizontal">
 
                         <RelativeLayout
-                            android:id="@+id/rl_p12_bobby"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="0.3" />
+                            android:layout_weight="0.1" />
 
                         <RelativeLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="0.25" />
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.25">
+                            android:layout_weight="0.1">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
 
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.12" />
 
                                 <RelativeLayout
+                                    android:id="@+id/rl_song1_verse4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.21" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.02" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_song1_verse5"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="0.3" />
 
                                 <RelativeLayout
-                                    android:id="@+id/rl_p12_child"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
-                                    android:layout_weight="0.7" />
+                                    android:layout_weight="0.35" />
+
                             </LinearLayout>
 
                         </RelativeLayout>
@@ -129,7 +86,8 @@
                         <RelativeLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="0.2" />
+                            android:layout_weight="0.8" />
+
                     </LinearLayout>
 
                 </RelativeLayout>

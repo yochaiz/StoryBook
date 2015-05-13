@@ -34,12 +34,12 @@
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.5">
+                    android:layout_weight="0.4">
 
                     <Button
                         android:id="@+id/btn_home_screen"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:background="@drawable/startbutton" />
 
                 </RelativeLayout>
@@ -47,7 +47,7 @@
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.45" />
+                    android:layout_weight="0.55" />
 
             </LinearLayout>
 

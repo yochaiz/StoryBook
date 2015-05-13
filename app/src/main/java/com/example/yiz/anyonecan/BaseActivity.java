@@ -43,36 +43,26 @@ public class BaseActivity extends Activity {
         gestureDetectorCompat = new GestureDetectorCompat(this, new MyGestureListener());
     }
 
-    protected int dipToPixels(int dip) {
-        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dip, getResources().getDisplayMetrics());
-        return px;
-    }
-
     protected void setPage(int index) {
         page = state.getPage(index);
         setNavigationButtons();
     }
 
-    protected void setClickableTextView(int tvId, int mediaID) {
-        TextView tv = (TextView) findViewById(tvId);
+    protected void setClickableRelativeLayout(int tvId, int mediaID) {
+        RelativeLayout tv = (RelativeLayout) findViewById(tvId);
         tv.setOnClickListener(new MediaPlayerOnClickListener(mediaID));
         tv.setOnTouchListener(new tvOnTouchListener()); //enables swipe gesture also on TextViews
     }
 
-    protected void setClickableButton(Button btn, int btnId, int mediaID) {
-        btn = (Button) findViewById(btnId);
+    protected void setClickableButton(int btnId, int mediaID) {
+        Button btn = (Button) findViewById(btnId);
         btn.setOnClickListener(new MediaPlayerOnClickListener(mediaID));
     }
 
-    //private Button createNavigationButton(int bckgrndID, int rule, int bottomMargin, int leftMargin, int rightMargin) {
     private Button createNavigationButton(int bckgrndID) {
         Button btn = new Button(this);
         btn.setBackgroundResource(bckgrndID);
-        //int px = dipToPixels(100);
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
-        //params.addRule(rule);
-        //params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        //params.setMargins(leftMargin, 0, rightMargin, bottomMargin);
         btn.setLayoutParams(params);
         return btn;
     }
@@ -84,19 +74,14 @@ public class BaseActivity extends Activity {
     }
 
     protected void setNavigationButtons() {
-        //int px = dipToPixels(50);
-        // RelativeLayout layout = (RelativeLayout) findViewById(pageID);
-        Button btn = null;
         Class target = page.getPrevious();
         if (target != null) {
-            //btn = createNavigationButton(R.drawable.backwards, ALIGN_PARENT_LEFT, px, px, 0);
-            btn = createNavigationButton(R.drawable.backwards);
+            Button btn = createNavigationButton(R.drawable.backwards);
             addBtnToView(btn, target, prevBtnID);
         }
         target = page.getNext();
         if (target != null) {
-            // btn = createNavigationButton(R.drawable.forward, ALIGN_PARENT_RIGHT, px, 0, px);
-            btn = createNavigationButton(R.drawable.forward);
+            Button btn = createNavigationButton(R.drawable.forward);
             addBtnToView(btn, target, nextBtnID);
         }
     }
