@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.yiz.anyonecan" >
+    package="com.example.yiz.anyonecan">
 
-    <uses-feature android:name="android.hardware.screen.portrait" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
 
     <application
         android:name=".GlobalState"
         android:allowBackup="true"
         android:icon="@mipmap/anyonecan_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity
             android:name=".WelcomeActivity"
             android:label="@string/app_name" />
         <activity
             android:name=".Page1Activity"
-            android:label="@string/title_activity_page1"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_page1" />
         <activity
             android:name=".Page2Activity"
-            android:label="@string/title_activity_page2"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_page2" />
         <activity
             android:name=".Page3Activity"
-            android:label="@string/title_activity_page3"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_page3" />
         <activity
             android:name=".Page4Activity"
-            android:label="@string/title_activity_page4"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_page4" />
         <activity
             android:name=".Page5Activity"
-            android:label="@string/title_activity_page5"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_page5" />
         <activity
             android:name=".Page6Activity"
-            android:label="@string/title_activity_page6"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_page6" />
         <activity
             android:name=".Page7Activity"
-            android:label="@string/title_activity_page7"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_page7" />
         <activity
             android:name=".Page8Activity"
-            android:label="@string/title_activity_page8"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_page8" />
+        <activity
+            android:name=".Page9Activity"
+            android:label="@string/title_activity_page9" />
+        <activity
+            android:name=".Page10Activity"
+            android:label="@string/title_activity_page10" />
+        <activity
+            android:name=".Page11Activity"
+            android:label="@string/title_activity_page11" />
         <activity
             android:name=".ListenGameActivity"
-            android:label="@string/title_activity_listen_game"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_listen_game" />
         <activity
             android:name=".HomeScreenActivity"
             android:label="@string/app_name"
-            android:screenOrientation="sensorPortrait" >
+            android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -61,12 +61,10 @@
         </activity>
         <activity
             android:name=".SongPage1Activity"
-            android:label="@string/title_activity_song_page1"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_song_page1" />
         <activity
             android:name=".SongPage2Activity"
-            android:label="@string/title_activity_song_page2"
-            android:screenOrientation="sensorPortrait" />
+            android:label="@string/title_activity_song_page2" />
         <activity
             android:name=".SongPage3Activity"
             android:label="@string/title_activity_song_page3" />
@@ -75,12 +73,62 @@
             android:label="@string/title_activity_song_page4" />
         <activity
             android:name=".WordPage1Activity"
-            android:label="@string/title_activity_word_page1" >
-        </activity>
+            android:label="@string/title_activity_word_page1" />
         <activity
             android:name=".WordPage2Activity"
-            android:label="@string/title_activity_word_page2" >
-        </activity>
+            android:label="@string/title_activity_word_page2" />
+        <activity
+            android:name=".VideoSong2Activity"
+            android:label="@string/title_activity_video_song2"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".VideoSong3Activity"
+            android:label="@string/title_activity_video_song3"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".VideoSong1Activity"
+            android:label="@string/title_activity_video_song1"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".VideoStory1Activity"
+            android:label="@string/title_activity_video_story1"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".VideoStory2Activity"
+            android:label="@string/title_activity_video_story2"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".VideoStory3Activity"
+            android:label="@string/title_activity_video_story3"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".VideoSongsActivity"
+            android:label="@string/title_activity_video_songs"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Page12Activity"
+            android:label="@string/title_activity_page12" />
+        <activity
+            android:name=".Page13Activity"
+            android:label="@string/title_activity_page13" />
+        <activity
+            android:name=".Page14Activity"
+            android:label="@string/title_activity_page14" />
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".GamesMenuActivity"
+            android:label="@string/title_activity_games_menu"
+            android:screenOrientation="sensorLandscape" />
     </application>
 
 </manifest>

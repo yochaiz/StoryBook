@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_songs_animation"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/video_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        >
+
+        <VideoView
+            android:id="@+id/video_view1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <VideoView
+            android:id="@+id/video_view2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <VideoView
+            android:id="@+id/video_view3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="200dp"
+            android:layout_height="198dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/play" />
+
+        <RelativeLayout
+            android:id="@+id/prevBtn"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_gravity="left|bottom" />
+
+
+        <RelativeLayout
+            android:id="@+id/nextBtn"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_gravity="right|bottom" />
+
+    </FrameLayout>
+
+</LinearLayout>
+
+

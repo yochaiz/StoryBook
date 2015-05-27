@@ -36,5 +36,15 @@
     <string name="title_activity_song_page4">SongPage4Activity</string>
     <string name="title_activity_word_page1">WordPage1Activity</string>
     <string name="title_activity_word_page2">WordPage2Activity</string>
+    <string name="title_activity_video_song1">VideoSong1</string>
+    <string name="title_activity_video_song2">VideoSong2Activity</string>
+    <string name="title_activity_video_song3">VideoSong3Activity</string>
+    <string name="title_activity_video_story1">VideoStory1Activity</string>
+    <string name="title_activity_video_story2">VideoStory2Activity</string>
+    <string name="title_activity_video_story3">VideoStory3Activity</string>
+    <string name="title_activity_tran_video_page1">TranVideoPage1</string>
+    <string name="title_activity_video_songs">VideoSongsActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_games_menu">GamesMenuActivity</string>
 
 </resources>

@@ -11,7 +11,10 @@ public class SongPage4Activity extends BaseActivity {
 
         setPage(R.id.songbook_page4);
 
-        setClickableRelativeLayout(R.id.rl_song2_full, R.raw.song2_full);
+        createStoppableMediaButton(R.drawable.play, R.drawable.pause, R.id.playBtn, R.raw.song2_full);
+        //createMediaButton(R.drawable.play, R.id.playBtn, R.raw.song2_full);
+
+        //setClickableRelativeLayout(R.id.rl_song2_full, R.raw.song2_full);
         setClickableRelativeLayout(R.id.rl_song2_verse4, R.raw.song2_verse4);
         setClickableRelativeLayout(R.id.rl_song2_verse5, R.raw.song2_verse5);
     }

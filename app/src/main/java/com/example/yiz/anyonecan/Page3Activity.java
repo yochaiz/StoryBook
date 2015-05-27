@@ -1,10 +1,10 @@
 package com.example.yiz.anyonecan;
 
 import android.os.Bundle;
-import android.widget.TextView;
-
 
 public class Page3Activity extends BaseActivity {
+
+    private final static int kidsSound = R.raw.b_1_3_5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,7 +13,8 @@ public class Page3Activity extends BaseActivity {
 
         setPage(R.id.page3);
 
-        setClickableRelativeLayout(R.id.rl_p3_children_left, R.raw.b_1_3_5);
-        setClickableRelativeLayout(R.id.rl_p3_children_right, R.raw.b_1_3_5);
+        createMediaButton(R.drawable.kidsbutton, R.id.kidsBtn, kidsSound);
+
+        setClickableRelativeLayout(R.id.rl_p3_children, kidsSound);
     }
 }

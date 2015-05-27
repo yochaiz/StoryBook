@@ -1,13 +1,11 @@
 package com.example.yiz.anyonecan;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.TextView;
-
 
 public class Page8Activity extends BaseActivity {
+
+    private final static int bobbySound = R.raw.b_1_3_14;
+    private final static int childSound = R.raw.b_1_3_15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,10 +14,11 @@ public class Page8Activity extends BaseActivity {
 
         setPage(R.id.page8);
 
-        setClickableRelativeLayout(R.id.rl_p13_bobby, R.raw.b_1_3_25);
-        setClickableRelativeLayout(R.id.rl_p13_child, R.raw.b_1_3_24);
+        setClickableRelativeLayout(R.id.bobbyBtn, bobbySound);
+        setClickableRelativeLayout(R.id.child1Btn, childSound);
 
-        setClickableRelativeLayout(R.id.rl_p14_bobby, R.raw.b_1_3_27);
-        setClickableRelativeLayout(R.id.rl_p14_child, R.raw.b_1_3_26);
+        setClickableRelativeLayout(R.id.rl_p8_bobby, bobbySound);
+        setClickableRelativeLayout(R.id.rl_p8_child_top, childSound);
+        setClickableRelativeLayout(R.id.rl_p8_child_bottom, childSound);
     }
 }
