@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.VideoView;
@@ -15,7 +16,8 @@ import android.widget.VideoView;
 
 public class VideoSong1Activity extends BaseActivity {
 
-    private VideoView mPlayer;
+    private VideoView mPlayer = null;
+    private Button mPlayButton = null;
 
     public void onCreate(Bundle b) {
         super.onCreate(b);
@@ -23,7 +25,7 @@ public class VideoSong1Activity extends BaseActivity {
         setPage(R.id.video_song_animation1);
 
         // Setup a play button to start the video
-        final Button mPlayButton = (Button) findViewById(R.id.play_button);
+        mPlayButton = (Button) findViewById(R.id.play_button);
         mPlayer = (VideoView) findViewById(R.id.video_view);
 
         mPlayer.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video_song_1));
@@ -38,6 +40,9 @@ public class VideoSong1Activity extends BaseActivity {
                 //finish();
             }
         });
+
+        mPlayer.setOnTouchListener(mPlayerOnTouch);
+
         mPlayButton.setOnClickListener(new View.OnClickListener() {
                                            @Override
                                            public void onClick(View v) {
@@ -48,6 +53,17 @@ public class VideoSong1Activity extends BaseActivity {
                                        }
         );
     }
+
+    private View.OnTouchListener mPlayerOnTouch = new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            if (mPlayer.isPlaying()) {
+                mPlayer.pause();
+                mPlayButton.setVisibility(View.VISIBLE);
+            }
+            return false;
+        }
+    };
 
     public void onResume() {
         super.onResume();
