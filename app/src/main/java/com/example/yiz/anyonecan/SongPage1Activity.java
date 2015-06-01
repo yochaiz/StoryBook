@@ -2,7 +2,7 @@ package com.example.yiz.anyonecan;
 
 import android.os.Bundle;
 
-public class SongPage1Activity extends BaseActivity {
+public class SongPage1Activity extends SongActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -11,9 +11,8 @@ public class SongPage1Activity extends BaseActivity {
 
         setPage(R.id.songbook_page1);
 
-        createStoppableMediaButton(R.drawable.play,R.drawable.pause, R.id.playBtn, R.raw.song1_full);
+        createStoppableMediaButton(R.raw.song1_full);
 
-        //setClickableRelativeLayout(R.id.rl_song1_full, R.raw.song1_full);
         setClickableRelativeLayout(R.id.rl_song1_verse1, R.raw.song1_verse1);
         setClickableRelativeLayout(R.id.rl_song1_verse2, R.raw.song1_verse2);
         setClickableRelativeLayout(R.id.rl_song1_verse3, R.raw.song1_verse3);

@@ -14,7 +14,9 @@ public class BaseActivity extends Activity {
     // protected GestureDetectorCompat gestureDetectorCompat = null;
     protected Page page = null;
     protected GlobalState state = null;
-    private MediaPlayer mp = null;
+    protected MediaPlayer mp = null;
+    protected MediaPlayer stoppableMp = null;
+    protected Button stoppableBtn = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +38,6 @@ public class BaseActivity extends Activity {
         //  tv.setOnTouchListener(new tvOnTouchListener()); //enables swipe gesture also on TextViews
     }
 
-//    protected void setClickableButton(int btnId, int mediaID) {
-//        Button btn = (Button) findViewById(btnId);
-//        btn.setOnClickListener(new MediaPlayerOnClickListener(mediaID));
-//    }
-
     private Button createNavigationButton(int bckgrndID) {
         Button btn = new Button(this);
         btn.setBackgroundResource(bckgrndID);
@@ -55,16 +52,6 @@ public class BaseActivity extends Activity {
             Button btn = createNavigationButton(bckgrndID);
             btn.setOnClickListener(new MediaPlayerOnClickListener(mediaID));
             layout.addView(btn);
-        }
-    }
-
-    protected void createStoppableMediaButton(int playBtn, int stopBtn, int layoutID, int mediaID) {
-        Button btn = (Button) findViewById(layoutID);
-        if (btn != null) {
-            //Button btn = createNavigationButton(playBtn);
-            btn.setBackgroundResource(playBtn);
-            btn.setOnClickListener(new StoppableMediaPlayerOnClickListener(mediaID, playBtn, stopBtn, btn));
-            //layout.addView(btn);
         }
     }
 
@@ -106,85 +93,6 @@ public class BaseActivity extends Activity {
         }
     }
 
-//    //enables swipe gesture also on TextViews
-//    class tvOnTouchListener implements View.OnTouchListener {
-//        @Override
-//        public boolean onTouch(View v, MotionEvent event) {
-//            gestureDetectorCompat.onTouchEvent(event);
-//            return false; //return true will ignore the click event, onClick won't be called
-//        }
-//    }
-
-    class StoppableMediaPlayerOnClickListener implements View.OnClickListener {
-        private Integer mediaID = null;
-        private Integer playBtn = null;
-        private Integer stopBtn = null;
-        private Button btn = null;
-        private Boolean isStopped = true;
-        private int currentPos = 0;
-        private int sessionID = 0;
-
-        public StoppableMediaPlayerOnClickListener(Integer mediaID, Integer playBtn, Integer stopBtn, Button btn) {
-            this.mediaID = mediaID;
-            this.playBtn = playBtn;
-            this.stopBtn = stopBtn;
-            this.btn = btn;
-            this.isStopped = true;
-        }
-
-        @Override
-        public void onClick(View v) {
-            if (mp == null) {
-                mp = MediaPlayer.create(getBaseContext(), mediaID);
-                currentPos = 0;
-                btn.setBackgroundResource(stopBtn);
-                isStopped = false;
-                sessionID = mp.getAudioSessionId();
-
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        currentPos = 0;
-                        btn.setBackgroundResource(playBtn);
-                        isStopped = true;
-                    }
-                });
-
-                mp.start();
-            } else if (mp.getAudioSessionId() == sessionID) {
-                if (!isStopped) {
-                    mp.pause();
-                    currentPos = mp.getCurrentPosition();
-                    btn.setBackgroundResource(playBtn);
-                    isStopped = true;
-                } else {
-                    mp.seekTo(currentPos);
-                    btn.setBackgroundResource(stopBtn);
-                    isStopped = false;
-                    mp.start();
-                }
-            } else {
-                mp.release();
-                mp = MediaPlayer.create(getBaseContext(), mediaID);
-                currentPos = 0;
-                btn.setBackgroundResource(stopBtn);
-                isStopped = false;
-                sessionID = mp.getAudioSessionId();
-
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        currentPos = 0;
-                        btn.setBackgroundResource(playBtn);
-                        isStopped = true;
-                    }
-                });
-
-                mp.start();
-            }
-        }
-    }
-
     //Generic onClick method to all app media
     class MediaPlayerOnClickListener implements View.OnClickListener {
         private Integer mediaID = null;
@@ -195,9 +103,9 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onClick(View v) {
-            Button btn = (Button) findViewById(R.id.playBtn);
-            if (btn != null) {
-                btn.setBackgroundResource(R.drawable.play);
+            if (stoppableBtn != null) {
+                stoppableMp.pause();
+                stoppableBtn.setBackgroundResource(R.drawable.play);
             }
             if (mp != null) {
                 mp.release();
@@ -234,6 +142,15 @@ public class BaseActivity extends Activity {
         }
     }
 
+    //    //enables swipe gesture also on TextViews
+//    class tvOnTouchListener implements View.OnTouchListener {
+//        @Override
+//        public boolean onTouch(View v, MotionEvent event) {
+//            gestureDetectorCompat.onTouchEvent(event);
+//            return false; //return true will ignore the click event, onClick won't be called
+//        }
+//    }
+
 //    @Override
 //    public boolean onTouchEvent(MotionEvent event) {
 //        this.gestureDetectorCompat.onTouchEvent(event);
@@ -259,46 +176,6 @@ public class BaseActivity extends Activity {
 //                startActivity(intent);
 //            }
 //            return true;
-//        }
-//    }
-
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) { //TODO: create base activity class that overrides this function
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//
-//        if (page.getPrevious() == null) {
-//            menu.removeItem(R.id.prev_page);
-//        }
-//        if (page.getNext() == null) {
-//            menu.removeItem(R.id.next_page);
-//        }
-//
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        switch (id) {
-//            case R.id.prev_page: {
-//                Intent intent = new Intent(getBaseContext(), page.getPrevious());
-//                startActivity(intent);
-//                return true;
-//            }
-//            case R.id.next_page: {
-//                Intent intent = new Intent(getBaseContext(), page.getNext());
-//                startActivity(intent);
-//                return true;
-//            }
-//            default:
-//                return super.onOptionsItemSelected(item);
 //        }
 //    }
 }
