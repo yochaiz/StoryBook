@@ -12,7 +12,7 @@
         >
 
         <VideoView
-            android:id="@+id/video_view1"
+            android:id="@+id/video_view"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" />
 
