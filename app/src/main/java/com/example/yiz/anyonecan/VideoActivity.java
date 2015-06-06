@@ -15,7 +15,6 @@ public class VideoActivity extends BaseActivity {
     private Integer videoID = null;
     private Integer layoutID = null;
     protected Integer videoPosition = 500;
-    private Integer backwardsFactor = 500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +59,7 @@ public class VideoActivity extends BaseActivity {
     };
 
     private Integer nonNegative(Integer value) {
+        Integer backwardsFactor = 500;
         value -= backwardsFactor;
         if (value < 0) {
             value = 0;

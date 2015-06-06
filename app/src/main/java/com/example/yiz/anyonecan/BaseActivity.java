@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import java.util.Random;
+
 public class BaseActivity extends Activity {
 
     // protected GestureDetectorCompat gestureDetectorCompat = null;
@@ -34,75 +36,72 @@ public class BaseActivity extends Activity {
 
     protected void setClickableRelativeLayout(int tvId, int mediaID) {
         RelativeLayout tv = (RelativeLayout) findViewById(tvId);
-        tv.setOnClickListener(new MediaPlayerOnClickListener(mediaID));
+        tv.setOnClickListener(new MediaPlayerOnClickListener(mediaID, tv));
         //  tv.setOnTouchListener(new tvOnTouchListener()); //enables swipe gesture also on TextViews
-    }
-
-    private Button createNavigationButton(int bckgrndID) {
-        Button btn = new Button(this);
-        btn.setBackgroundResource(bckgrndID);
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
-        btn.setLayoutParams(params);
-        return btn;
     }
 
     protected void createMediaButton(int bckgrndID, int layoutID, int mediaID) {
         RelativeLayout layout = (RelativeLayout) findViewById(layoutID);
         if (layout != null) {
-            Button btn = createNavigationButton(bckgrndID);
-            btn.setOnClickListener(new MediaPlayerOnClickListener(mediaID));
-            layout.addView(btn);
+            layout.setBackgroundResource(bckgrndID);
+            layout.setOnClickListener(new MediaPlayerOnClickListener(mediaID, layout));
         }
     }
 
-    private void addBtnToView(Button btn, Class target, int layoutID) {
+    private void setNavigationRV(Class target, int layoutID, int bckgrndID) {
         RelativeLayout layout = (RelativeLayout) findViewById(layoutID);
         if (layout != null) {
-            btn.setOnClickListener(new NavOnClickListener(target));
-            layout.addView(btn);
+            layout.setBackgroundResource(bckgrndID);
+            layout.setOnClickListener(new NavOnClickListener(target, layout));
         }
     }
 
     protected void setNavigationButtons() {
-        Button btn = createNavigationButton(R.drawable.homebtn);
-        addBtnToView(btn, MenuActivity.class, R.id.homeBtn);
         Class target = page.getPrevious();
         if (target != null) {
-            btn = createNavigationButton(R.drawable.backwards);
-            addBtnToView(btn, target, R.id.prevBtn);
+            setNavigationRV(target, R.id.prevBtn, R.drawable.backwards);
         }
         target = page.getNext();
         if (target != null) {
-            btn = createNavigationButton(R.drawable.forward);
-            addBtnToView(btn, target, R.id.nextBtn);
+            setNavigationRV(target, R.id.nextBtn, R.drawable.forward);
         }
     }
 
     class NavOnClickListener implements View.OnClickListener {
-        private Class target = null;
+        private AnimateOnClick anim = null;
+        private Navigation navigate = null;
 
-        public NavOnClickListener(Class target) {
-            this.target = target;
+        public NavOnClickListener(final Class target, RelativeLayout layout) {
+            navigate = new Navigation() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(getBaseContext(), target);
+                    startActivity(intent);
+                    finish();
+                }
+            };
+            this.anim = randomAnimation(layout);
         }
 
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getBaseContext(), this.target);
-            startActivity(intent);
-            finish();
+            anim.click(navigate);
         }
     }
 
     //Generic onClick method to all app media
     class MediaPlayerOnClickListener implements View.OnClickListener {
         private Integer mediaID = null;
+        private AnimateOnClick anim = null;
 
-        public MediaPlayerOnClickListener(Integer mediaID) {
+        public MediaPlayerOnClickListener(Integer mediaID, RelativeLayout layout) {
             this.mediaID = mediaID;
+            this.anim = randomAnimation(layout);
         }
 
         @Override
         public void onClick(View v) {
+            anim.click();
             if (stoppableBtn != null) {
                 stoppableMp.pause();
                 stoppableBtn.setBackgroundResource(R.drawable.play);
@@ -113,6 +112,37 @@ public class BaseActivity extends Activity {
             mp = MediaPlayer.create(getBaseContext(), mediaID);
             mp.start();
         }
+    }
+
+    protected static AnimateOnClick randomAnimation(RelativeLayout layout) {
+        Random rand = new Random();
+        int max = 3;
+        int randomNum = rand.nextInt((max) + 1);
+        AnimateOnClick anim = null;
+        switch (randomNum) {
+            case 0:
+                anim = new ScaleOnClick(layout);
+                break;
+
+            case 1:
+                anim = new SlideOnClick(layout);
+                break;
+
+            case 2:
+                anim = new RotateOnClick(layout);
+                break;
+
+            case 3:
+                anim = new FadeOnClick(layout);
+                break;
+        }
+        return anim;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 
     @Override
