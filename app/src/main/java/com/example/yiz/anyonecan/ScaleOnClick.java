@@ -15,7 +15,7 @@ public final class ScaleOnClick extends AnimateOnClick {
     private static float pivotY = 0.5f;
 
     public ScaleOnClick(RelativeLayout layout) {
-        super((RelativeLayout) layout.getParent().getParent(), layout);
+        super(layout);
 
         scaleXfrom = layout.getScaleX();
         scaleYfrom = layout.getScaleY();

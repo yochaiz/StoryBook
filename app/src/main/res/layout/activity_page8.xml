@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout android:clipChildren="false" xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/page8"
     android:layout_width="match_parent"
@@ -6,48 +6,48 @@
     android:background="@drawable/storybook_page8"
     tools:context="com.example.yiz.anyonecan.Page8Activity">
 
-    <LinearLayout
+    <LinearLayout android:clipChildren="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <RelativeLayout android:clipChildren="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.8">
 
-            <LinearLayout
+            <LinearLayout android:clipChildren="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.28">
 
-                    <LinearLayout
+                    <LinearLayout android:clipChildren="false"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
-                        <RelativeLayout
+                        <RelativeLayout android:clipChildren="false"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.15" />
 
-                        <RelativeLayout
+                        <RelativeLayout android:clipChildren="false"
                             android:id="@+id/rl_p8_bobby"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.5" />
 
-                        <RelativeLayout
+                        <RelativeLayout android:clipChildren="false"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.1" />
 
-                        <RelativeLayout
+                        <RelativeLayout android:clipChildren="false"
                             android:id="@+id/rl_p8_child_top"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
@@ -58,43 +58,43 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.52" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2">
 
-                    <LinearLayout
+                    <LinearLayout android:clipChildren="false"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
-                        <RelativeLayout
+                        <RelativeLayout android:clipChildren="false"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.1" />
 
-                        <RelativeLayout
+                        <RelativeLayout android:clipChildren="false"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.25">
 
-                            <LinearLayout
+                            <LinearLayout android:clipChildren="false"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal">
 
-                                <RelativeLayout
+                                <RelativeLayout android:clipChildren="false"
                                     android:id="@+id/bobbyBtn"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.8" />
 
-                                <RelativeLayout
+                                <RelativeLayout android:clipChildren="false"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.2" />
@@ -102,28 +102,28 @@
 
                         </RelativeLayout>
 
-                        <RelativeLayout
+                        <RelativeLayout android:clipChildren="false"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.35" />
 
-                        <RelativeLayout
+                        <RelativeLayout android:clipChildren="false"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.25">
 
-                            <LinearLayout
+                            <LinearLayout android:clipChildren="false"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal">
 
-                                <RelativeLayout
+                                <RelativeLayout android:clipChildren="false"
                                     android:id="@+id/child1Btn"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.8" />
 
-                                <RelativeLayout
+                                <RelativeLayout android:clipChildren="false"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.2" />
@@ -131,7 +131,7 @@
 
                         </RelativeLayout>
 
-                        <RelativeLayout
+                        <RelativeLayout android:clipChildren="false"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.05" />
@@ -144,45 +144,45 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <RelativeLayout android:clipChildren="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.12">
 
-            <LinearLayout
+            <LinearLayout android:clipChildren="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.052" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:id="@+id/prevBtn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.104" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:id="@+id/rl_p8_child_bottom"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.1" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.588" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:id="@+id/nextBtn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.104" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.052" />
@@ -191,7 +191,7 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <RelativeLayout android:clipChildren="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.08" />

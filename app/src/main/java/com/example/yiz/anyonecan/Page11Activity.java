@@ -14,6 +14,7 @@ public class Page11Activity extends BaseActivity {
 
         setPage(R.id.page11);
 
+        invertFlip();
         createMediaButton(R.drawable.child6, R.id.child6Btn, childSound);
         createMediaButton(R.drawable.bobbybutton, R.id.bobbyBtn, bobbySound);
 

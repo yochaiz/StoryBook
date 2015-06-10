@@ -1,34 +1,38 @@
 package com.example.yiz.anyonecan;
 
-import android.view.View;
 import android.view.animation.Animation;
 import android.widget.RelativeLayout;
 
 public abstract class AnimateOnClick {
-    RelativeLayout clickableLayout = null;
     RelativeLayout layout = null;
     int duration = 1000;
     int repeat = 1;
 
+    //    private void disableClipOnParents(View v) {
+//        if (v.getParent() == null) {
+//            return;
+//        }
+//        if (v instanceof ViewGroup) {
+//            ((ViewGroup) v).setClipChildren(false);
+//        }
+//        if (v.getParent() instanceof View) {
+//            disableClipOnParents((View) v.getParent());
+//        }
+//    }
+
     protected AnimateOnClick(RelativeLayout layout) {
         this.layout = layout;
-        this.clickableLayout = layout;
     }
 
-    protected AnimateOnClick(RelativeLayout layout, RelativeLayout clickableLayout) {
-        this.layout = layout;
-        this.clickableLayout = clickableLayout;
-    }
-
-    protected AnimateOnClick(RelativeLayout layout, RelativeLayout clickableLayout, int repeat) {
-        this(layout, clickableLayout);
+    protected AnimateOnClick(RelativeLayout layout, int repeat) {
+        this(layout);
         this.repeat = repeat;
     }
 
     protected abstract Animation createAnimation();
 
     private void run(Animation.AnimationListener animListener) {
-        clickableLayout.setClickable(false);
+        layout.setClickable(false);
         Animation anim = createAnimation();
         anim.setDuration(duration); // 1000 ms = 1second
         anim.setRepeatCount(repeat);
@@ -41,7 +45,7 @@ public abstract class AnimateOnClick {
         Navigation navigate = new Navigation() {
             @Override
             public void run() {
-                clickableLayout.setClickable(true);
+                layout.setClickable(true);
             }
         };
         run(new AnimListener(navigate));
@@ -52,7 +56,7 @@ public abstract class AnimateOnClick {
             @Override
             public void run() {
                 navigate.run();
-                clickableLayout.setClickable(true);
+                layout.setClickable(true);
             }
         };
         run(new AnimListener(newNavigate));

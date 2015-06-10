@@ -19,11 +19,13 @@ public class BaseActivity extends Activity {
     protected MediaPlayer mp = null;
     protected MediaPlayer stoppableMp = null;
     protected Button stoppableBtn = null;
+    private static int flip = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        flip = 1;
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
         state = (GlobalState) getApplicationContext();
         // gestureDetectorCompat = new GestureDetectorCompat(this, new MyGestureListener());
@@ -34,9 +36,13 @@ public class BaseActivity extends Activity {
         setNavigationButtons();
     }
 
+    protected void invertFlip() {
+        flip = -1;
+    }
+
     protected void setClickableRelativeLayout(int tvId, int mediaID) {
         RelativeLayout tv = (RelativeLayout) findViewById(tvId);
-        tv.setOnClickListener(new MediaPlayerOnClickListener(mediaID, tv));
+        tv.setOnClickListener(new MediaPlayerOnClickListener(mediaID));
         //  tv.setOnTouchListener(new tvOnTouchListener()); //enables swipe gesture also on TextViews
     }
 
@@ -48,22 +54,22 @@ public class BaseActivity extends Activity {
         }
     }
 
-    private void setNavigationRV(Class target, int layoutID, int bckgrndID) {
+    private void setNavigationRV(Class target, int layoutID, int bckgrndID, int flipVal) {
         RelativeLayout layout = (RelativeLayout) findViewById(layoutID);
         if (layout != null) {
             layout.setBackgroundResource(bckgrndID);
-            layout.setOnClickListener(new NavOnClickListener(target, layout));
+            layout.setOnClickListener(new NavOnClickListener(target, layout, flipVal));
         }
     }
 
     protected void setNavigationButtons() {
         Class target = page.getPrevious();
         if (target != null) {
-            setNavigationRV(target, R.id.prevBtn, R.drawable.backwards);
+            setNavigationRV(target, R.id.prevBtn, R.drawable.backwards, 1);
         }
         target = page.getNext();
         if (target != null) {
-            setNavigationRV(target, R.id.nextBtn, R.drawable.forward);
+            setNavigationRV(target, R.id.nextBtn, R.drawable.forward, -1);
         }
     }
 
@@ -71,7 +77,7 @@ public class BaseActivity extends Activity {
         private AnimateOnClick anim = null;
         private Navigation navigate = null;
 
-        public NavOnClickListener(final Class target, RelativeLayout layout) {
+        public NavOnClickListener(final Class target, RelativeLayout layout, int flipVal) {
             navigate = new Navigation() {
                 @Override
                 public void run() {
@@ -80,7 +86,7 @@ public class BaseActivity extends Activity {
                     finish();
                 }
             };
-            this.anim = randomAnimation(layout);
+            this.anim = randomAnimation(layout, flipVal);
         }
 
         @Override
@@ -94,14 +100,21 @@ public class BaseActivity extends Activity {
         private Integer mediaID = null;
         private AnimateOnClick anim = null;
 
-        public MediaPlayerOnClickListener(Integer mediaID, RelativeLayout layout) {
+        public MediaPlayerOnClickListener(Integer mediaID) {
             this.mediaID = mediaID;
-            this.anim = randomAnimation(layout);
+        }
+
+        public MediaPlayerOnClickListener(Integer mediaID, RelativeLayout layout) {
+            this(mediaID);
+            this.anim = randomAnimation(layout, flip);
         }
 
         @Override
         public void onClick(View v) {
-            anim.click();
+            if (anim != null) {
+                anim.click();
+            }
+
             if (stoppableBtn != null) {
                 stoppableMp.pause();
                 stoppableBtn.setBackgroundResource(R.drawable.play);
@@ -114,7 +127,7 @@ public class BaseActivity extends Activity {
         }
     }
 
-    protected static AnimateOnClick randomAnimation(RelativeLayout layout) {
+    protected static AnimateOnClick randomAnimation(RelativeLayout layout, int flipVal) {
         Random rand = new Random();
         int max = 3;
         int randomNum = rand.nextInt((max) + 1);
@@ -125,7 +138,7 @@ public class BaseActivity extends Activity {
                 break;
 
             case 1:
-                anim = new SlideOnClick(layout);
+                anim = new SlideOnClick(layout, flipVal);
                 break;
 
             case 2:

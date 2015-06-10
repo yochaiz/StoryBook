@@ -6,20 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.logging.Handler;
-
 public class HomeScreenActivity extends Activity {
 
     Class nextPage = MenuActivity.class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //create fullscreen
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
@@ -39,6 +31,12 @@ public class HomeScreenActivity extends Activity {
 //        };
 //        long delay = 4000;
 //        timer.schedule(task, delay);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 
     private View.OnClickListener btnClick = new View.OnClickListener() {

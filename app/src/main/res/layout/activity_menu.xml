@@ -1,43 +1,43 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout android:clipChildren="false" xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main"
     tools:context="com.example.yiz.anyonecan.MenuActivity">
 
-    <LinearLayout
+    <LinearLayout android:clipChildren="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <RelativeLayout android:clipChildren="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.22" />
 
-        <RelativeLayout
+        <RelativeLayout android:clipChildren="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.23">
 
-            <LinearLayout
+            <LinearLayout android:clipChildren="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.15" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:id="@+id/menuStart"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.52" />
 
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33" />
@@ -46,45 +46,45 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <RelativeLayout android:clipChildren="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.02" />
 
-        <RelativeLayout
+        <RelativeLayout android:clipChildren="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2">
 
-            <LinearLayout
+            <LinearLayout android:clipChildren="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:id="@+id/menu15"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.23" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.08" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:id="@+id/menu610"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.23" />
 
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.21" />
@@ -93,44 +93,44 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <RelativeLayout android:clipChildren="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.05" />
 
-        <RelativeLayout
+        <RelativeLayout android:clipChildren="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2">
 
-            <LinearLayout
+            <LinearLayout android:clipChildren="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:id="@+id/menuGames"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.07" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:id="@+id/menuStory"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.23" />
 
-                <RelativeLayout
+                <RelativeLayout android:clipChildren="false"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.12" />
@@ -138,7 +138,7 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <RelativeLayout android:clipChildren="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.08" />

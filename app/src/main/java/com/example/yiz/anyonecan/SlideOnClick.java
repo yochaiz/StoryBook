@@ -5,10 +5,12 @@ import android.view.animation.TranslateAnimation;
 import android.widget.RelativeLayout;
 
 public final class SlideOnClick extends AnimateOnClick {
-    private static int xLength = 150;
+    private int xLength = 150;
 
-    public SlideOnClick(RelativeLayout layout) {
+    public SlideOnClick(RelativeLayout layout, int flip) {
         super(layout);
+
+        xLength *= flip;
     }
 
     protected Animation createAnimation() {
