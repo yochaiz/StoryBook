@@ -1,6 +1,5 @@
 package com.example.yiz.anyonecan;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
@@ -11,7 +10,7 @@ import android.widget.RelativeLayout;
 
 import java.util.Random;
 
-public class BaseActivity extends Activity {
+public class BaseActivity extends ImmersiveActivity {
 
     // protected GestureDetectorCompat gestureDetectorCompat = null;
     protected Page page = null;
@@ -55,22 +54,19 @@ public class BaseActivity extends Activity {
     }
 
     private void setNavigationRV(Class target, int layoutID, int bckgrndID, int flipVal) {
-        RelativeLayout layout = (RelativeLayout) findViewById(layoutID);
-        if (layout != null) {
-            layout.setBackgroundResource(bckgrndID);
-            layout.setOnClickListener(new NavOnClickListener(target, layout, flipVal));
+        if (target != null) {
+            RelativeLayout layout = (RelativeLayout) findViewById(layoutID);
+            if (layout != null) {
+                layout.setBackgroundResource(bckgrndID);
+                layout.setOnClickListener(new NavOnClickListener(target, layout, flipVal));
+            }
         }
     }
 
     protected void setNavigationButtons() {
-        Class target = page.getPrevious();
-        if (target != null) {
-            setNavigationRV(target, R.id.prevBtn, R.drawable.backwards, 1);
-        }
-        target = page.getNext();
-        if (target != null) {
-            setNavigationRV(target, R.id.nextBtn, R.drawable.forward, -1);
-        }
+        setNavigationRV(MenuActivity.class, R.id.homeBtn, R.drawable.homebtn, -1);
+        setNavigationRV(page.getPrevious(), R.id.prevBtn, R.drawable.backwards, 1);
+        setNavigationRV(page.getNext(), R.id.nextBtn, R.drawable.forward, -1);
     }
 
     class NavOnClickListener implements View.OnClickListener {
@@ -150,12 +146,6 @@ public class BaseActivity extends Activity {
                 break;
         }
         return anim;
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 
     @Override

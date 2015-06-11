@@ -44,9 +44,6 @@
             android:name=".Page11Activity"
             android:label="@string/title_activity_page11" />
         <activity
-            android:name=".ListenGameActivity"
-            android:label="@string/title_activity_listen_game" />
-        <activity
             android:name=".HomeScreenActivity"
             android:label="@string/app_name"
             android:screenOrientation="sensorLandscape">

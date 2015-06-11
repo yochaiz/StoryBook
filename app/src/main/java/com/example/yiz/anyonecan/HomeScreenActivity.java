@@ -1,12 +1,11 @@
 package com.example.yiz.anyonecan;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class HomeScreenActivity extends Activity {
+public class HomeScreenActivity extends ImmersiveActivity {
 
     Class nextPage = MenuActivity.class;
 
@@ -31,12 +30,6 @@ public class HomeScreenActivity extends Activity {
 //        };
 //        long delay = 4000;
 //        timer.schedule(task, delay);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 
     private View.OnClickListener btnClick = new View.OnClickListener() {

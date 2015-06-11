@@ -1,12 +1,11 @@
 package com.example.yiz.anyonecan;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-public class MenuActivity extends Activity {
+public class MenuActivity extends ImmersiveActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +23,6 @@ public class MenuActivity extends Activity {
         RelativeLayout layout_story = (RelativeLayout) findViewById(R.id.menuStory);
         layout_story.setOnClickListener(btnClick5);
 
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 
     private View.OnClickListener btnClick1 = new View.OnClickListener() {
