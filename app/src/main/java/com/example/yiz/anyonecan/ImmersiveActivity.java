@@ -49,3 +49,4 @@ public class ImmersiveActivity extends Activity {
         mHandler.post(decor_view_settings);
     }
 }
+//note
